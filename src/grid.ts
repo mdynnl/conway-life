@@ -22,11 +22,15 @@ export const Grid = (
     return cells[r][c]
   }
 
-  const setCell = (r: number, c: number, v: any) => {
+  const setCell = (
+    r: number,
+    c: number,
+    v: number | ((v: number) => number)
+  ) => {
     let rc = getRC(r, c)
     if (!rc) return
     ;[r, c] = rc
-    cells[r][c] = v
+    cells[r][c] = typeof v === 'function' ? v(cells[r][c]) : v
   }
 
   const next = () => {
