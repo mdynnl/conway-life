@@ -28,6 +28,6 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(iosevka.subset.ttf) format('truetype');
+  src: url(./assets/iosevka.subset.ttf) format('truetype');
   unicode-range: U+2800-28FF;
 }
