@@ -105,6 +105,10 @@ const App: Component = () => {
             'font-size': `${cellSize() * 4}px`,
             width: `${cellSize() * size()}px`,
             height: `${cellSize() * size()}px`,
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%,-50%)',
           }}
         >
           <pre class={styles.background} textContent={all()} />
@@ -160,7 +164,7 @@ const App: Component = () => {
           <label>
             <input
               type="range"
-              min={5}
+              min={2}
               step={0.01}
               max={20}
               value={cellSize()}
